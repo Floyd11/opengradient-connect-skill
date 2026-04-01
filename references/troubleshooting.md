@@ -30,6 +30,7 @@
 
 **Diagnostic:**
 ```python
+import os
 import opengradient as og
 llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 print(llm.get_balance())  # should be > 0
@@ -180,6 +181,7 @@ Check that you are using the correct Python interpreter / virtual environment.
 
 **Diagnostic:**
 ```python
+import os
 import opengradient as og
 llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 print(llm.chain_id)  # must be 84532 for Testnet

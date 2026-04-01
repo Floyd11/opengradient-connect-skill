@@ -1,4 +1,4 @@
-#!/usr/bin/env env bash
+#!/usr/bin/env bash
 # og_pypi_check.sh — Fetch the latest opengradient version from PyPI.
 # Usage: bash .agent/skills/05-opengradient-connect/scripts/og_pypi_check.sh
 #
