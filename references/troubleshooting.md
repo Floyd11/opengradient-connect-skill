@@ -31,13 +31,13 @@
 **Diagnostic:**
 ```python
 import opengradient as og
-llm = og.LLM(private_key=os.environ["OPENGRADIENT_PRIVATE_KEY"])
+llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 print(llm.get_balance())  # should be > 0
 ```
 
 **Fix:**
 1. Get testnet tokens from the OpenGradient Discord faucet or: https://faucet.base.org
-2. Verify wallet address matches your `OPENGRADIENT_PRIVATE_KEY`.
+2. Verify wallet address matches your `OG_PRIVATE_KEY`.
 3. Re-run `llm.ensure_opg_approval(opg_amount=5.0)` after topping up.
 
 ---
@@ -125,7 +125,7 @@ python3 -c "
 from eth_account import Account
 import os
 try:
-    acc = Account.from_key(os.environ['OPENGRADIENT_PRIVATE_KEY'])
+    acc = Account.from_key(os.environ['OG_PRIVATE_KEY'])
     print('Valid. Address:', acc.address)
 except Exception as e:
     print('Invalid key:', e)
@@ -181,7 +181,7 @@ Check that you are using the correct Python interpreter / virtual environment.
 **Diagnostic:**
 ```python
 import opengradient as og
-llm = og.LLM(private_key=os.environ["OPENGRADIENT_PRIVATE_KEY"])
+llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 print(llm.chain_id)  # must be 84532 for Testnet
 ```
 
@@ -205,5 +205,5 @@ python3 -c "from langchain_opengradient import ChatOpenGradient; print('OK')"
 **Fix:**
 - Install: `pip install langchain-opengradient`
 - Use `ChatOpenGradient` as a drop-in for `ChatOpenAI`.
-- Ensure `OPENGRADIENT_PRIVATE_KEY` is set — LangChain reads it from the environment.
+- Ensure `OG_PRIVATE_KEY` is set — LangChain reads it from the environment.
 - Golden Rules still apply inside LangChain chains: call `ensure_opg_approval()` before invoking the chain, and extract `payment_hash` from the raw response metadata.

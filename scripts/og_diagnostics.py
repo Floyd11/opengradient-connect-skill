@@ -71,7 +71,7 @@ def check_requirements_txt(root: Path) -> dict:
 
 def check_env_vars(root: Path) -> dict:
     """Check .env file for required OpenGradient variables."""
-    required = ["OPENGRADIENT_PRIVATE_KEY"]
+    required = ["OG_PRIVATE_KEY"]
     env_file = root / ".env"
     found: dict[str, bool] = {k: False for k in required}
 
@@ -184,9 +184,9 @@ def main() -> None:
 
     print(json.dumps(report, indent=2))
 
-    # Non-zero exit if not ready — useful for CI gates
-    if not report["ready_to_integrate"]:
-        sys.exit(1)
+    # NOTE: Always exit 0 so AI agents (Cursor, Windsurf, etc.) read the full JSON
+    # output and make their own decisions based on the `ready_to_integrate` field,
+    # instead of treating a non-zero exit code as a fatal error.
 
 
 if __name__ == "__main__":

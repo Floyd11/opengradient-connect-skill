@@ -42,11 +42,11 @@ NEVER write or adapt code before completing these checks. Run **both modes**.
 
 ### 1A — Manual Analysis (fast, always first)
 - Read `requirements.txt`: look for `opengradient`. If missing → stop and instruct installation.
-- Read `.env`: look for `OPENGRADIENT_PRIVATE_KEY`. If missing → block further steps.
+- Read `.env`: look for `OG_PRIVATE_KEY`. If missing → block further steps.
 - Check `pyproject.toml` or `setup.py` if `requirements.txt` is absent.
 - Detect package manager: `pip` / `poetry` / `venv` / `conda`.
 - Detect existing integrations: LangChain, LangGraph, FastAPI, plain Python.
-- Report findings explicitly: *"I see opengradient==X.Y.Z is installed but OPENGRADIENT_PRIVATE_KEY is missing from .env."*
+- Report findings explicitly: *"I see opengradient==X.Y.Z is installed but OG_PRIVATE_KEY is missing from .env."*
 
 ### 1B — Auto Diagnostics (precise, for complex projects)
 Run the bundled diagnostic script and read its JSON output before generating code:

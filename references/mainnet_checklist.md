@@ -68,12 +68,12 @@ Only after steps 1–3 are confirmed, update `.env`:
 
 ```bash
 # OLD (Testnet) — keep in .env.testnet.backup
-# OPENGRADIENT_PRIVATE_KEY=<testnet_key>
+# OG_PRIVATE_KEY=<testnet_key>
 # CHAIN_ID=84532
 # RPC_URL=https://sepolia.base.org
 
 # NEW (Mainnet) — values from Step 1
-OPENGRADIENT_PRIVATE_KEY=<mainnet_private_key>
+OG_PRIVATE_KEY=<mainnet_private_key>
 CHAIN_ID=<mainnet_chain_id_from_step_1>
 RPC_URL=<mainnet_rpc_from_step_1>
 ```
@@ -109,7 +109,7 @@ Permit2 approval is **per-network**. The Testnet approval is not valid on Mainne
 import opengradient as og
 import os
 
-llm = og.LLM(private_key=os.environ["OPENGRADIENT_PRIVATE_KEY"])
+llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 # This spends real OPG. Confirm the amount is intentional.
 llm.ensure_opg_approval(opg_amount=5.0)
 print("Mainnet Permit2 approval granted.")
