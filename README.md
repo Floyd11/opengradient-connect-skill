@@ -245,7 +245,7 @@ OG_PRIVATE_KEY=0xYOUR_PRIVATE_KEY_HERE
 | **Base Sepolia (Testnet)** | `84532` | `https://sepolia.base.org` | ✅ Active |
 | **OpenGradient Mainnet** | TBD | TBD | 🔜 Coming Soon |
 
-To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [Base Sepolia Faucet](https://faucet.base.org).
+To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [Opengradient_Base Sepolia Faucet](https://faucet.opengradient.ai/).
 
 ---
 
