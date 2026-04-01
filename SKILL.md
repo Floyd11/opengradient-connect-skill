@@ -9,7 +9,7 @@ description: >
   Network Context Guard (Testnet vs Mainnet), Mainnet migration interactive checklist, and
   troubleshooting TEE/gateway errors. Always fetches code from the canonical GitHub source.
 last_verified_date: "2026-04-01"
-og_sdk_version_tested: "0.9.3"
+og_sdk_version_tested: "0.9.6"
 og_sdk_latest_pypi: "0.9.6"
 ---
 
@@ -149,7 +149,7 @@ At the top of every integration session, check if the skill's knowledge is stale
 1. Run: `pip index versions opengradient 2>/dev/null | head -1` to get latest PyPI version.
 2. Compare with `og_sdk_version_tested` field at the top of this file.
 3. If they differ, inform the user:
-   > "The skill was last verified against opengradient `0.9.3`. The latest PyPI version is `X.Y.Z`.
+   > "The skill was last verified against opengradient `0.9.6`. The latest PyPI version is `X.Y.Z`.
    > I will apply this skill's logic but recommend verifying API changes in the
    > [OpenGradient changelog](https://docs.opengradient.ai) before production use."
 4. Run `scripts/og_diagnostics.py` — it also checks PyPI and reports `update_needed: true/false`.

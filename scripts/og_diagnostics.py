@@ -12,7 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-SKILL_SDK_VERSION = "0.9.3"  # version this skill was last verified against
+SKILL_SDK_VERSION = "0.9.6"  # version this skill was last verified against
 TESTNET_CHAIN_ID = "84532"
 
 
