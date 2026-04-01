@@ -358,7 +358,7 @@ Quick reference for the most common errors. The full database is in [`references
 - 📘 [OpenGradient Documentation](https://docs.opengradient.ai)
 - 🍳 [Developer Cookbook](https://github.com/Floyd11/OpenGradient-Developer-Cookbook)
 - 💬 [OpenGradient Discord](https://discord.gg/opengradient)
-- 🔗 [Base Sepolia Faucet](https://faucet.base.org)
+- 🔗 [Opengradient_Base Sepolia Faucet](https://faucet.opengradient.ai/)
 - 📦 [opengradient on PyPI](https://pypi.org/project/opengradient/)
 
 ---
