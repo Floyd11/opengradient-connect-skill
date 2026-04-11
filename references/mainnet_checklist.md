@@ -111,7 +111,7 @@ import os
 
 llm = og.LLM(private_key=os.environ["OG_PRIVATE_KEY"])
 # This spends real OPG. Confirm the amount is intentional.
-llm.ensure_opg_approval(opg_amount=5.0)
+llm.ensure_opg_approval(min_allowance=5.0)
 print("Mainnet Permit2 approval granted.")
 ```
 

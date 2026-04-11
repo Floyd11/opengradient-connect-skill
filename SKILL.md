@@ -8,9 +8,9 @@ description: >
   fetching from the official cookbook, Golden Rules enforcement (Permit2 approval + TEE proof logging),
   Network Context Guard (Testnet vs Mainnet), Mainnet migration interactive checklist, and
   troubleshooting TEE/gateway errors. Always fetches code from the canonical GitHub source.
-last_verified_date: "2026-04-01"
-og_sdk_version_tested: "0.9.6"
-og_sdk_latest_pypi: "0.9.6"
+last_verified_date: "2026-04-11"
+og_sdk_version_tested: "0.9.9"
+og_sdk_latest_pypi: "0.9.9"
 ---
 
 # OpenGradient Connect — Agent Instructions
@@ -104,7 +104,7 @@ You MUST enforce both rules in every piece of OG code you write or review.
 ```python
 # MANDATORY: Call ONCE at app startup, before any inference.
 # This grants the x402 Gateway permission to spend OPG tokens on behalf of the user.
-llm.ensure_opg_approval(opg_amount=5.0)
+llm.ensure_opg_approval(min_allowance=5.0)
 ```
 - Place in `main()`, `lifespan()` (FastAPI), or module `__init__`.
 - NEVER call it inside an inference loop — it is a one-time startup action.

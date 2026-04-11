@@ -39,7 +39,7 @@ print(llm.get_balance())  # should be > 0
 **Fix:**
 1. Get testnet tokens from the OpenGradient Discord faucet or: https://faucet.base.org
 2. Verify wallet address matches your `OG_PRIVATE_KEY`.
-3. Re-run `llm.ensure_opg_approval(opg_amount=5.0)` after topping up.
+3. Re-run `llm.ensure_opg_approval(min_allowance=5.0)` after topping up.
 
 ---
 
@@ -98,19 +98,19 @@ print(result.tee_attestation)  # inspect raw attestation object
 
 **Symptom:** `PermissionError: Gateway not authorized to spend OPG`, or first inference fails.
 
-**Cause:** `llm.ensure_opg_approval()` was never called, or called with `opg_amount=0`.
+**Cause:** `llm.ensure_opg_approval()` was never called, or called with `min_allowance=0`.
 
 **Fix:**
 ```python
 # Add to application startup — once, not per-request:
-llm.ensure_opg_approval(opg_amount=5.0)
+llm.ensure_opg_approval(min_allowance=5.0)
 ```
 
 For FastAPI, place inside the `lifespan` context manager:
 ```python
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    llm.ensure_opg_approval(opg_amount=5.0)  # startup
+    llm.ensure_opg_approval(min_allowance=5.0)  # startup
     yield
 ```
 

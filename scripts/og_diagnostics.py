@@ -12,7 +12,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-SKILL_SDK_VERSION = "0.9.6"  # version this skill was last verified against
+SKILL_SDK_VERSION = "0.9.9"  # version this skill was last verified against
 TESTNET_CHAIN_ID = "84532"
 
 
@@ -71,7 +71,7 @@ def check_requirements_txt(root: Path) -> dict:
 
 def check_env_vars(root: Path) -> dict:
     """Check .env file for required OpenGradient variables."""
-    required = ["OG_PRIVATE_KEY"]
+    required = ["OG_PRIVATE_KEY", "OPENGRADIENT_PRIVATE_KEY"]
     env_file = root / ".env"
     found: dict[str, bool] = {k: False for k in required}
 
@@ -89,10 +89,13 @@ def check_env_vars(root: Path) -> dict:
             if k in found:
                 found[k] = True
 
+    # Consider it present if EITHER name is found
+    all_present = found["OG_PRIVATE_KEY"] or found["OPENGRADIENT_PRIVATE_KEY"]
+
     return {
         "env_file_exists": env_file.exists(),
         "vars": found,
-        "all_present": all(found.values()),
+        "all_present": all_present,
     }
 
 

@@ -2,10 +2,10 @@
 
 > **An AI Agent Skill that makes integrating the OpenGradient SDK safe, fast, and always up-to-date.**
 
-![Version](https://img.shields.io/badge/version-1.0.1-blue)
+![Version](https://img.shields.io/badge/version-1.0.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Network](https://img.shields.io/badge/network-Base%20Sepolia-orange)
-![SDK](https://img.shields.io/badge/og--sdk-0.9.6%20tested-purple)
+![SDK](https://img.shields.io/badge/og--sdk-0.9.9%20tested-purple)
 ![Status](https://img.shields.io/badge/mainnet-not%20yet%20launched-red)
 
 ---
@@ -245,7 +245,7 @@ OG_PRIVATE_KEY=0xYOUR_PRIVATE_KEY_HERE
 | **Base Sepolia (Testnet)** | `84532` | `https://sepolia.base.org` | ✅ Active |
 | **OpenGradient Mainnet** | TBD | TBD | 🔜 Coming Soon |
 
-To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [Opengradient_Base Sepolia Faucet](https://faucet.opengradient.ai/).
+To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [Base Sepolia Faucet](https://faucet.base.org).
 
 ---
 
@@ -257,7 +257,7 @@ Every piece of code this skill generates or reviews enforces these two rules *wi
 ```python
 # Called ONCE at application startup — never inside a loop.
 # Grants the x402 Gateway permission to spend $OPG on behalf of the user.
-llm.ensure_opg_approval(opg_amount=5.0)
+llm.ensure_opg_approval(min_allowance=5.0)
 ```
 **If missing → flagged as a critical bug.**
 
@@ -288,8 +288,8 @@ python .agent/skills/05-opengradient-connect/scripts/og_diagnostics.py
   "package_manager": "pip",
   "sdk": {
     "installed": true,
-    "installed_version": "0.9.6",
-    "latest_pypi_version": "0.9.6",
+    "installed_version": "0.9.9",
+    "latest_pypi_version": "0.9.9",
     "update_needed": false
   },
   "env_vars": {
@@ -358,7 +358,7 @@ Quick reference for the most common errors. The full database is in [`references
 - 📘 [OpenGradient Documentation](https://docs.opengradient.ai)
 - 🍳 [Developer Cookbook](https://github.com/Floyd11/OpenGradient-Developer-Cookbook)
 - 💬 [OpenGradient Discord](https://discord.gg/opengradient)
-- 🔗 [Base Sepolia Faucet](https://faucet.opengradient.ai/)
+- 🔗 [Base Sepolia Faucet](https://faucet.base.org)
 - 📦 [opengradient on PyPI](https://pypi.org/project/opengradient/)
 
 ---
