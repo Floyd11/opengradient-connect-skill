@@ -32,7 +32,7 @@
 | **Network Context Guard** | The agent always asks Testnet or Mainnet? before generating constants or config. |
 | **Mainnet Migration Checklist** | An interactive 8-step safety protocol for moving from Sepolia to Mainnet — requires manual confirmation at each step. |
 | **PyPI Freshness Check** | Compares installed SDK version with latest on PyPI and warns if stale. |
-| **Troubleshooting Database** | Top 10 TEE / Gateway / x402 errors with exact diagnostic commands and fixes. |
+| **Troubleshooting Database** | Top 10 TEE / Gateway / x402 Gateway Gateway errors with exact diagnostic commands and fixes. |
 
 ---
 
@@ -245,7 +245,7 @@ OG_PRIVATE_KEY=0xYOUR_PRIVATE_KEY_HERE
 | **Base Sepolia (Testnet)** | `84532` | `https://sepolia.base.org` | ✅ Active |
 | **OpenGradient Mainnet** | TBD | TBD | 🔜 Coming Soon |
 
-To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [Base Sepolia Faucet](https://faucet.base.org).
+To get testnet `$OPG` tokens: join the [OpenGradient Discord](https://discord.gg/opengradient) or use the [OpenGradient Faucet](https://faucet.opengradient.ai/).
 
 ---
 
@@ -358,7 +358,7 @@ Quick reference for the most common errors. The full database is in [`references
 - 📘 [OpenGradient Documentation](https://docs.opengradient.ai)
 - 🍳 [Developer Cookbook](https://github.com/Floyd11/OpenGradient-Developer-Cookbook)
 - 💬 [OpenGradient Discord](https://discord.gg/opengradient)
-- 🔗 [Base Sepolia Faucet](https://faucet.base.org)
+- 🔗 [OpenGradient Faucet](https://faucet.opengradient.ai/)
 - 📦 [opengradient on PyPI](https://pypi.org/project/opengradient/)
 
 ---

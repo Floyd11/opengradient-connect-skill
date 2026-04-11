@@ -11,11 +11,11 @@
 |---|-----------------|---------|
 | 1 | `InsufficientFundsError` / balance too low | [→ §1](#1-insufficient-opg-balance) |
 | 2 | `GatewayTimeoutError` / x402 request timed out | [→ §2](#2-gateway-timeout-x402) |
-| 3 | `TEEAttestationError` / proof not returned | [→ §3](#3-tee-attestation-failure) |
+| 3 | `TEEAttestationError" / proof not returned | [→ §3](#3-tee-attestation-failure) |
 | 4 | `payment_hash` is `None` | [→ §4](#4-payment_hash-is-none) |
-| 5 | `PermissionError` / Permit2 not approved | [→ §5](#5-permit2-approval-missing) |
-| 6 | `InvalidPrivateKeyError` | [→ §6](#6-invalid-private-key) |
-| 7 | `ConnectionRefusedError` / RPC unreachable | [→ §7](#7-rpc-connection-refused) |
+| 5 | `PermissionError" / Permit2 not approved | [→ §5](#5-permit2-approval-missing) |
+| 6 | `InvalidPrivateKeyError" | [→ §6](#6-invalid-private-key) |
+| 7 | `ConnectionRefusedError" / RPC unreachable | [→ §7](#7-rpc-connection-refused) |
 | 8 | `ModuleNotFoundError: opengradient` | [→ §8](#8-sdk-not-installed) |
 | 9 | Wrong Chain ID / transactions fail silently | [→ §9](#9-wrong-chain-id) |
 | 10 | LangChain integration returning generic errors | [→ §10](#10-langchain-integration-errors) |
@@ -37,7 +37,7 @@ print(llm.get_balance())  # should be > 0
 ```
 
 **Fix:**
-1. Get testnet tokens from the OpenGradient Discord faucet or: https://faucet.base.org
+1. Get testnet tokens from the OpenGradient Discord faucet or: https://faucet.opengradient.ai/
 2. Verify wallet address matches your `OG_PRIVATE_KEY`.
 3. Re-run `llm.ensure_opg_approval(min_allowance=5.0)` after topping up.
 
